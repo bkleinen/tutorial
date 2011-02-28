@@ -13,5 +13,6 @@ class PagesController < ApplicationController
   
   def help
     @title = "HELP"
+    return "huhu1"
   end
 end
