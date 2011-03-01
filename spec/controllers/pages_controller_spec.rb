@@ -10,7 +10,7 @@ render_views
     it "should have the right title" do
        get 'about'
        response.should 
-       have_selector("title", :content => "Tutorial, the HOME Page")
+       have_selector("title", :content => "Tutorial, the Home Page")
     end
   end
 
@@ -22,7 +22,7 @@ render_views
     it "should have the right title" do
        get 'about'
        response.should 
-       have_selector("title", :content => "Tutorial, the CONTACT Page")
+       have_selector("title", :content => "Tutorial, the Contact Page")
     end
   end
   
@@ -34,7 +34,7 @@ render_views
     it "should have the right title" do
        get 'about'
        response.should 
-       have_selector("title", :content => "Tutorial, the ABOUT Page")
+       have_selector("title", :content => "Tutorial, the About Page")
     end
  
   end
