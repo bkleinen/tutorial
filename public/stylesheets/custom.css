@@ -20,6 +20,7 @@ section {
   font-size: 120%;
   padding: 20px;
   background: #fff;
+  display: block;
 
   white-space: nowrap;
 }
@@ -100,13 +101,31 @@ a.signup_button {
   border-radius:         10px;
 }
 footer {
-  text-align: center;
-  margin-top: 10px;
-  width: 710px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer nav {
   float: none;
 }
+
+footer ul {
+  margin: 0;
+  padding: 0;
+
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+footer ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+footer ul li a:visited {
+  color: #09c;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
