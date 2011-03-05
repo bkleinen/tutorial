@@ -30,6 +30,10 @@ gem 'sqlite3'
 #   gem 'webrat'
 # end
 
+group :development do
+  gem 'annotate-models', '1.0.4'
+end
+
 group :test do
   gem 'webrat', '0.7.1'
 end
