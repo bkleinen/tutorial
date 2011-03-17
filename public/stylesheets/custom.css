@@ -153,8 +153,9 @@ td.sidebar {
 }
 
 
-
-
+div.field, div.actions {
+  margin.bottom:10px;
+}
 
 
 
