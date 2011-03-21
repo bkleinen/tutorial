@@ -123,5 +123,7 @@ describe User do
     end
     
   end
-  
+ it "should have one failing test to test this test bug" do
+   "hallo".should be_nil
+ end  
 end

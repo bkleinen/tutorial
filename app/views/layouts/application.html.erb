@@ -9,6 +9,11 @@
   <body>
     <div class="container">
       <%= render 'layouts/header' %>
+      <% flash.each do |key, value| %>
+      <!-- <div class="flash <%= key %>"><%= value %></div>
+	And just to demonstrate that this also works: -->
+          <%= content_tag(:div, value, :class => "flash #{key}") %>
+      <% end %>
       <section class="round"><%= yield %></section>
       <br />
       <%= render 'layouts/footer' %>
