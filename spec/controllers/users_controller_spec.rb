@@ -1,4 +1,6 @@
+# require 'test_helper'
 require 'spec_helper'
+require 'action_view/test_case'
 
 describe UsersController do
   render_views
