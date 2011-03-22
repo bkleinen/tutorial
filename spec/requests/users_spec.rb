@@ -59,6 +59,9 @@ describe "sign in/out" do
         click_link "Sign out"
         controller.should_not be_signed_in
       end
+ 
+     # it "should do something that is not yet implemented" 
+      
     end
   end
 
