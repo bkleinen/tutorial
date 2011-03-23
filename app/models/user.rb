@@ -27,11 +27,11 @@
 require 'digest'
 
 class User < ActiveRecord::Base
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
 
+  has_many :microposts
 
   validates :name, :presence => true , :length => { :maximum => 50 }
   validates :email, :presence => true, :format => { :with => email_regex },
@@ -40,6 +40,7 @@ class User < ActiveRecord::Base
                        :confirmation => true,
                        :length => {:within => 6..40}
    
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
    
    
  before_save :encrypt_password
