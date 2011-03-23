@@ -118,7 +118,7 @@ describe User do
           user = User.authenticate(@attr[:email],@attr[:password])
           user.should == @user
         end
-        it "should do something that I'll implement later"
+      
       end
       
     end

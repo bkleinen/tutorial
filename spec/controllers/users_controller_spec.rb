@@ -5,10 +5,7 @@ require 'action_view/test_case'
 describe UsersController do
 
   render_views
-  
-  before :each do
-    @factory_user = Factory(:user)
-  end
+
   
   describe "GET :new" do
     it "should be successful" do
@@ -23,7 +20,10 @@ describe UsersController do
   end
   
   describe "GET 'show'" do
-
+  
+    before :each do
+      @factory_user = Factory(:user)
+    end
     it "should find the right user" do
       get :show, :id => @factory_user
       assigns(:user).should == @factory_user
@@ -72,7 +72,7 @@ describe UsersController do
     describe "success" do
 
       before(:each) do
-        @attr = { :name => "New User", :email => "user@example.com",
+        @attr = { :name => "New User", :email => "user-create-success@example.com",
                   :password => "foobar", :password_confirmation => "foobar" }
       end
 
@@ -245,7 +245,7 @@ describe UsersController do
         end
 
       end
-
+   
       it "should be successful" do
         get :index
         response.should be_success
@@ -258,7 +258,7 @@ describe UsersController do
 
       it "should have an element for each user" do
         get :index
-        @users[0..2] do |user|
+        @users[0..2].each do |user|
           response.should have_selector("li", :content => user.name)
         end
       end
@@ -284,7 +284,7 @@ describe "DELETE 'destroy'" do
     describe "as a non-signed-in user" do
       it "should deny access" do
         delete :destroy, :id => @user
-        response.should redirect_to(signin_path)
+        response.should redirect_to(root_path)
       end
     end
 
