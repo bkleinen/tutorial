@@ -1,0 +1,8 @@
+<h1>All users</h1>
+
+<%= will_paginate %>
+<ul class="users">
+    <%= render @users # searches for a _user partial! - 
+     # call either on user or @user, the latter will automagically iterate. %> 
+</ul>
+<%= will_paginate %>
