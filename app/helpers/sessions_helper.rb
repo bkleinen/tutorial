@@ -14,14 +14,15 @@ module SessionsHelper
   end
 
  def current_user?(user)
-    @current_user == user
+    return false unless current_user
+    current_user.id == user.id
   end
   def current_user=(user)
-    @current_user = user
+    current_user = user
   end
 
   def current_user
-     current_user ||= user_from_remember_token
+     @current_user ||= user_from_remember_token
   end
   def authenticate
     deny_access unless signed_in?
