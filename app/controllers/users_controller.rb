@@ -61,10 +61,6 @@ class UsersController < ApplicationController
 
   
   private
-    #10.1
-    def authenticate
-      deny_access unless signed_in?
-    end
     #10.2
     def current_user?(user)
       user == current_user
