@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.4'
 gem 'sqlite3'
 gem 'gravatar_image_tag', '1.0.0'
+gem 'will_paginate'
+
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
@@ -10,6 +12,7 @@ gem 'gravatar_image_tag', '1.0.0'
 
 group :development do
   gem 'annotate-models', '1.0.4'
+  gem 'faker'
 end
 
 group :test do
