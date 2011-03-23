@@ -4,5 +4,4 @@ log/*.log
 *.log
 tmp/
 *.swp
-*.lock
 db/schema.rb
