@@ -33,15 +33,17 @@ class User < ActiveRecord::Base
 
   has_many :microposts
 
-  validates :name, :presence => true , :length => { :maximum => 50 }
+  
+  validates :name, :presence => true , :length => { :maximum => 50 } 
+  
+  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, :presence => true, :format => { :with => email_regex },
                     :uniqueness => { :case_sensitive => false }
   validates :password, :presence => true,
                        :confirmation => true,
                        :length => {:within => 6..40}
    
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-   
+    
    
  before_save :encrypt_password
  
