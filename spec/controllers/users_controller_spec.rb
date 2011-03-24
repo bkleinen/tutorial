@@ -292,7 +292,7 @@ describe "DELETE 'destroy'" do
     describe "as a non-signed-in user" do
       it "should deny access" do
         delete :destroy, :id => @user
-        response.should redirect_to(root_path)
+        response.should redirect_to(signin_path)
       end
     end
 
