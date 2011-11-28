@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
-gem 'sqlite3', '1.3.3'
+gem 'rails', '3.0.9'
+#gem 'sqlite3', "~> 1.3.4"       #      1.3.4-x86-mingw32
+gem 'sqlite3'
 gem 'gravatar_image_tag', '1.0.0'
 gem 'will_paginate', '3.0.pre2'
 
@@ -11,7 +12,7 @@ gem 'will_paginate', '3.0.pre2'
 # gem 'ruby-debug19'
 
 group :development do
-  gem 'annotate-models', '1.0.4'
+  gem 'annotate', '2.4.0'
   gem 'faker'
 end
 
@@ -23,5 +24,5 @@ end
 
 # http://relishapp.com/rspec/rspec-rails/v/2-4
 group :test, :development do
-  gem "rspec-rails", "~> 2.4"
+  gem "rspec-rails", "~> 2.6"
 end
